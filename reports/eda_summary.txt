@@ -1,0 +1,24 @@
+============================================================
+EDA SUMMARY — Hospital Readmission Analytics
+============================================================
+
+Total rows       : 18,330
+Total columns    : 13
+Unique hospitals : 2,995
+Unique states    : 51
+Unique conditions: 6
+
+Hospitals above national avg : 5,643 (48.1%)
+
+Conditions found:
+  READM-30-HIP-KNEE-HRRP: 3,055 records
+  READM-30-CABG-HRRP: 3,055 records
+  READM-30-AMI-HRRP: 3,055 records
+  READM-30-COPD-HRRP: 3,055 records
+  READM-30-PN-HRRP: 3,055 records
+  READM-30-HF-HRRP: 3,055 records
+
+Risk tier distribution:
+  LOW: 6,077
+  MEDIUM: 5,430
+  HIGH: 213

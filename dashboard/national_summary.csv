@@ -1,0 +1,7 @@
+condition_name,total_hospitals,national_avg_ratio,best_ratio,worst_ratio,hospitals_penalized,pct_penalized,total_penalty_usd
+Hip/Knee Replacement,1447,1.0040,0.4698,1.6297,693,47.9,8884544
+AMI (Heart Attack),1736,1.0018,0.6839,1.2639,862,49.7,4593267
+CABG,878,1.0018,0.7434,1.4237,438,49.9,3399332
+Pneumonia,2715,1.0015,0.7967,1.4255,1271,46.8,7111247
+Heart Failure,2621,1.0014,0.7137,1.3606,1282,48.9,6752148
+COPD,2323,1.0011,0.8681,1.2545,1097,47.2,4282602

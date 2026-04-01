@@ -1,0 +1,53 @@
+======================================================================
+AI-GENERATED HOSPITAL INSIGHTS — SAMPLE OUTPUT
+Model: Groq llama-3.1-8b-instant
+======================================================================
+
+--- Hospital 1 ---
+Facility ID : 360072
+State       : OH
+Condition   : Hip/Knee Replacement
+Risk Score  : 100.0/100
+Penalty Cost: $62,937
+Excess Ratio: 1.6297
+
+AI Insight:
+Hospital 360072 in Ohio has a significantly higher readmission rate compared to the national average, with a rate of 162.32% that is more than 60% above the national average. This disparity contributes to an estimated penalty cost of $62,937, underscoring the need for targeted interventions to improve patient outcomes and reduce readmissions.
+
+AI Recommendation:
+Implement a standardized, evidence-based discharge planning protocol for patients undergoing hip/knee replacement surgery, specifically targeting the high-risk tier, to ensure comprehensive post-discharge support and reduce the likelihood of readmissions within 30 days.
+
+----------------------------------------------------------------------
+
+--- Hospital 2 ---
+Facility ID : 140127
+State       : IL
+Condition   : Hip/Knee Replacement
+Risk Score  : 98.6/100
+Penalty Cost: $58,239
+Excess Ratio: 1.5827
+
+AI Insight:
+The hospital with Facility ID 140127 has a significantly higher readmission rate compared to the national average, with a rate of 157.64% that is more than 57% higher than the national average. This excessive readmission rate translates to an estimated penalty cost of $58,239, highlighting the need for targeted interventions to improve patient outcomes.
+
+AI Recommendation:
+Implement a comprehensive, data-driven discharge planning program that includes standardized, evidence-based protocols for post-operative care and follow-up appointments, with a specific focus on high-risk patients (Risk Tier: HIGH) who account for 98.6% of the hospital's risk score, aiming to reduce the readmission rate by at least 10% within the next 6 months.
+
+----------------------------------------------------------------------
+
+--- Hospital 3 ---
+Facility ID : 220080
+State       : MA
+Condition   : Hip/Knee Replacement
+Risk Score  : 97.2/100
+Penalty Cost: $56,550
+Excess Ratio: 1.5658
+
+AI Insight:
+Hospital 220080 in Massachusetts has a significantly higher readmission rate compared to the national average, with a rate of 155.96% that exceeds the national average by 55.96%. This translates to a higher Excess Readmission Ratio of 1.5658, indicating a higher likelihood of readmission among patients undergoing hip/knee replacement surgery.
+
+AI Recommendation:
+Implement a standardized, evidence-based discharge planning protocol that incorporates patient education, medication reconciliation, and post-discharge follow-up to reduce readmissions by 10% within the next 6 months, focusing on high-risk patients (Risk Tier: HIGH) and leveraging the hospital's #1 rank in the state as a benchmark for improvement.
+
+----------------------------------------------------------------------
+

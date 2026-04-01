@@ -1,0 +1,111 @@
+
+============================================================
+  Hospital Readmission Analytics — Data Quality Report
+============================================================
+Generated : 2026-03-30 13:18:39
+Source    : data\raw\readmissions_raw.csv
+
+Total rows loaded : 18,330
+Total columns     : 12
+
+============================================================
+  CHECK 1 — Missing Values
+============================================================
+  facility_name                            0 missing  (  0.00%)  [PASS]
+  facility_id                              0 missing  (  0.00%)  [PASS]
+  state                                    0 missing  (  0.00%)  [PASS]
+  measure_name                             0 missing  (  0.00%)  [PASS]
+  number_of_discharges                 10088 missing  ( 55.04%)  [FAIL] <-- FLAG
+  footnote                             11343 missing  ( 61.88%)  [FAIL] <-- FLAG
+  excess_readmission_ratio              6610 missing  ( 36.06%)  [FAIL] <-- FLAG
+  predicted_readmission_rate            6610 missing  ( 36.06%)  [FAIL] <-- FLAG
+  expected_readmission_rate             6610 missing  ( 36.06%)  [FAIL] <-- FLAG
+  number_of_readmissions                6610 missing  ( 36.06%)  [FAIL] <-- FLAG
+  start_date                               0 missing  (  0.00%)  [PASS]
+  end_date                                 0 missing  (  0.00%)  [PASS]
+
+Columns with > 5% missing : 6
+  - number_of_discharges (55.0% missing)
+  - footnote (61.9% missing)
+  - excess_readmission_ratio (36.1% missing)
+  - predicted_readmission_rate (36.1% missing)
+  - expected_readmission_rate (36.1% missing)
+  - number_of_readmissions (36.1% missing)
+
+NOTE: excess_readmission_ratio missing 36% — these are hospitals
+      with too few cases to calculate a reliable ratio (CMS policy).
+      These rows will be dropped in the ETL step.
+
+============================================================
+  CHECK 2 — Duplicate Records
+============================================================
+  PASS — No duplicate hospital + condition combinations found.
+
+============================================================
+  CHECK 3 — Invalid State Codes
+============================================================
+  PASS — All state codes are valid US states.
+
+  Valid states found in dataset: ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+
+============================================================
+  CHECK 4 — Excess Readmission Ratio Range (valid: 0.0 to 5.0)
+============================================================
+  Valid ratio rows   : 11,720
+  Out-of-range rows  : 0
+  Min ratio found    : 0.4698
+  Max ratio found    : 1.6297
+  PASS — All ratio values are within expected range (0–5).
+
+============================================================
+  CHECK 5 — CMS Condition Codes
+============================================================
+  Expected conditions : 6
+  Found conditions    : 6
+  PASS — All conditions match expected CMS codes.
+    READM-30-AMI-HRRP : 3,055 records
+    READM-30-CABG-HRRP : 3,055 records
+    READM-30-COPD-HRRP : 3,055 records
+    READM-30-HF-HRRP : 3,055 records
+    READM-30-HIP-KNEE-HRRP : 3,055 records
+    READM-30-PN-HRRP : 3,055 records
+
+============================================================
+  CHECK 6 — Facility ID Format
+============================================================
+  PASS — All 3,055 facility IDs are numeric.
+  ID range: 10001 to 670342
+
+============================================================
+  CHECK 7 — Number of Discharges (sanity check)
+============================================================
+  Valid discharge rows : 8,242
+  Negative values      : 0
+  Min discharges       : 0
+  Max discharges       : 3672
+  Avg discharges       : 283
+  PASS — No negative discharge counts found.
+
+============================================================
+  DATA QUALITY SUMMARY
+============================================================
+  Total rows checked    : 18,330
+  Total issues flagged  : 47,871
+  Duplicate rows        : 0
+  Invalid states        : 0
+  Out-of-range ratios   : 0
+  Missing ratio rows    : 6,610
+
+  VERDICT: NEEDS CLEANING
+
+  ACTION: ETL pipeline will drop rows where ratio is null.
+          These represent hospitals below CMS minimum case threshold.
+          Remaining rows after drop: ~11,720
+
+------------------------------------------------------------
+  RESUME BULLET (copy this):
+------------------------------------------------------------
+  'Implemented automated data quality validation across
+   18,330 CMS hospital records — flagging 47,871 issues
+   across 7 checks including missing values, duplicates,
+   invalid state codes, and out-of-range ratio values.'

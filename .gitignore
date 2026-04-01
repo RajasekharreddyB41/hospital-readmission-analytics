@@ -1,0 +1,12 @@
+(
+echo .env
+echo __pycache__/
+echo *.py[cod]
+echo .ipynb_checkpoints/
+echo .venv/
+echo venv/
+echo data/raw/*.csv
+echo data/processed/*.csv
+echo .DS_Store
+echo Thumbs.db
+) > .gitignore
