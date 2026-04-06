@@ -14,6 +14,9 @@ CMS penalized hospitals **$564 million** in FY2023 through the Hospital Readmiss
 ---
 
 ## Pipeline Architecture
+## 📊 Dashboard Preview
+
+<img src="assets/powerbi-dashboard.png" width="900">
 
 ```
 CMS Dataset (18,330 rows)

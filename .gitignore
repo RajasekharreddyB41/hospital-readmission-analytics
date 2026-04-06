@@ -1,12 +1,10 @@
-(
-echo .env
-echo __pycache__/
-echo *.py[cod]
-echo .ipynb_checkpoints/
-echo .venv/
-echo venv/
-echo data/raw/*.csv
-echo data/processed/*.csv
-echo .DS_Store
-echo Thumbs.db
-) > .gitignore
+.env
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+data/raw/*.csv
+data/processed/*.csv
+.DS_Store
+Thumbs.db
